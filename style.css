@@ -1,0 +1,440 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(241, 240, 239);
+    font-family: gilroy, sans-serif;
+}
+html, body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #111;
+}
+body{
+    overflow-x: hidden;
+}
+nav{
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    padding: 2vw 6vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 100;
+    background-color: #111;
+
+}
+.nav-item h4{
+    padding-top:8vh;
+}
+nav .nav-items
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vw;
+    font-weight: 300;
+    padding: auto;
+    height: 100px;
+    position: relative;
+}
+.nav-item h4{
+    transition: all 0.3s ease-in-out;
+    font-weight: 700;
+    font-size: 14px;
+}
+.categories{
+    height: 100%;
+    margin: 0;
+    padding: 10px;
+    margin-bottom: 30px;
+} 
+.categories h5{
+    padding: 5px 0;
+    opacity:0;
+    font-size: 12px;
+}
+.categories h5 span {
+    display: inline-block; 
+    transform: translateY(25px);
+    z-index: 1000;
+  }
+.nav-underline{
+    width: 85vw;
+    position: absolute;
+    z-index: 90;
+    top: 5.6vh;
+    border-bottom: 2px solid rgb(56, 55, 55);
+    
+}
+#nav-btn{
+    padding: 4px 14px;
+    background-color: #0DA34E;
+    border-radius: 50px;
+    font-size: 1.3vw;
+    border: none;
+}
+
+#page1{
+    height: 100vh;
+    width: 100vw;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#page1 h1{
+    font-size:7vw;
+    text-transform: uppercase;
+    font-weight:900;
+    line-height: 8.5vw;
+    letter-spacing: 0.1vw;
+}
+#page1 p{
+    text-align: center;
+    font-weight: 400;
+    margin-top: 3vh;
+    margin-bottom: 3px;
+}
+#something{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+}
+#something h4{
+    border: 2px solid rgb(61, 61, 61);
+    border-radius: 50px;
+    padding: 5px 12px;
+}
+#something h4:nth-last-child(2){
+    border:none;
+    padding: 2px;
+
+}
+.moving-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 54%;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    bottom: 5%;
+}
+.moving-div .move{
+    display: inline-block;
+    animation: mobe;
+    animation-timing-function: linear;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+.move img{
+    margin: 0 18px;
+    height:2.5vh;
+
+}
+.blur-right{
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    right: 0%;
+    top: 0%;
+    background: linear-gradient(to right,transparent,#111);
+}
+.blur-left {
+  position: absolute;
+  width: 20%;
+  left: 0%;
+  height: 100%;
+  top: 0%;
+  background: linear-gradient(to right, #111, transparent);
+  z-index: 10;
+}
+@keyframes mobe {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+#page2{
+    height: 87vh;
+    width: 100vw;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.left-div{
+    width:44%;
+    height:100%;
+    font-size: large;
+    display: flex;
+    margin: 50px;
+    flex-direction: column;
+    align-items:flex-start ;
+    justify-content: space-between;
+    padding: 40px 15px;
+}
+.left-div h5{
+    font-size: 11px;
+}
+.right-div{
+    width:56%;
+    margin: 50px;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+}
+.right-elem{
+    position: relative;
+    padding-top: 2vw;
+    padding-bottom: 5vw;
+    font-size:13px;
+    padding: 40px 15px;
+    font-weight: 300;
+    border-bottom: 2px solid rgb(53, 51, 51);
+    margin-right: 100px;
+}
+.right-elem img{
+    border-radius: 50%;
+    opacity: 0;
+    object-fit: cover;
+    position: absolute;
+}
+.page3{
+    width: 100%;
+    height: 100vh;
+    background-color: #111;
+    position: relative;
+    background-image: url(https://lazarev.kiev.ua/la24/reel-cover.webp);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.pagecenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pagecenter i {
+  width: 100px;
+  height: 100px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 24px;
+  color: #111;
+  border-radius: 50%;
+}
+
+.pagecenter h5 {
+  margin-top: 1.5%;
+  color: #111;
+  font-weight: 400;
+  background-color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.pagecenter:hover h5{
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+
+.page3 video{
+    object-fit: cover;
+    width: 100%;
+    opacity: 0;
+    height: 100vh;
+    position: absolute;
+    transform: scaleX(0.7) scaleY(0.2);
+    border-radius: 30px;
+}
+.page4{
+    width:100vw;
+    height: 100vh;
+    color: #111;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+
+}
+.left{
+    background-color: #ffffff;
+    width: 2000px;
+    color: #111;
+    height: 100%;
+    font-weight: 600;
+    padding: 20px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 150px;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 100px;
+}
+.box{
+    padding: 10px 80px;
+    margin-top: 10px;
+    color: #111;
+}
+.box h3{
+    color: rgb(141, 137, 137);
+    margin-bottom: 20px;
+}
+.box h4{
+    color: #111;
+    font-weight: 300;
+}
+.section5 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 20px; 
+  background-color: #ffffff;
+  padding: 40px;
+  padding-left: 60px;
+  padding-right: 60px;
+
+}
+
+.section5 .box {
+  flex: 0 1 calc(33.33% - 40px); /* 3 in a row with spacing */
+  background-color: rgb(245, 245, 245);
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.section5 .box h1{
+    font-size: 70px;
+    color: #111;
+}
+.section5 .box p{
+    font-size: smaller;
+    color: #111;
+}
+.section6{
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #ffffff;
+    display: flex;
+}
+.section6 .leftside{
+    width:46%;
+    padding: 150px 70px;
+}
+.section6 .leftside h1{
+    font-size: 50px;
+    margin-bottom: 30px;
+    border-top: 2px solid black;
+    color: #111;
+    padding-top: 20px;
+    margin-left: 70px;
+}
+.section6 .leftside .p{
+    margin-left: 70px;
+    color: #111;
+}
+.section6 .rightside{
+    background-color: rgb(255, 255, 255);
+    width: 54%;
+    padding: 80px 0px;
+    position: relative;
+
+}
+.section6 .rightside img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.section6 .rightside .cursor{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(19, 234, 234);
+    border-radius: 50%;
+    pointer-events: none;
+    text-align: center;
+    padding-top: 25px;
+    z-index: 10;
+    opacity: 0;
+    scale: 0;
+}
+.section7{
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    color: #111;
+    display: flex;
+}
+.section7 .leftside{
+    width:46%;
+    padding: 150px 70px;
+}
+.section7 .leftside h1{
+    font-size: 50px;
+    margin-bottom: 30px;
+    color: #111;
+    border-top: 2px solid black;
+    padding-top: 20px;
+    margin-left: 70px;
+}
+.section7 .leftside .p{
+    margin-left: 70px;
+    color: #111;
+}
+.section7 #rightside{
+    background-color: rgb(255, 255, 255);
+    width: 54%;
+    padding: 80px 0px;
+    position: relative;
+
+}
+#rightside img{
+   width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#cursor2{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(230, 234, 6);
+    border-radius: 50%;
+    pointer-events: none;
+    text-align: center;
+    padding-top: 35px;
+    z-index: 10;
+    opacity: 0;
+    scale: 0;
+}
